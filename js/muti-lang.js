@@ -16,12 +16,12 @@ function initLang() {
     showContent();
 }
 function showContent() {
-    for (let e of document.querySelectorAll(".lang"))
-        e.style = "display: none";
+    for (const e of document.querySelectorAll(".lang"))
+        e.style.display = "none";
     if (craftwar_lang == "zh")
-        document.querySelector(".lang.zh").style = "";
+        document.querySelector(".lang.zh").style.display = "";
     else
-        document.querySelector(".lang.en").style = "";
+        document.querySelector(".lang.en").style.display = "";
 }
 function toggleLanguage() {
     if (craftwar_lang == "en")
