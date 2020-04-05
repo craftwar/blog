@@ -1,5 +1,5 @@
 var craftwar_lang;
-window.addEventListener('load', initLanguage);
+window.addEventListener('load', initLang);
 // navigator.languages is supported by firefox/chrome
 function initLang() {
     for (const lang of navigator.languages) {
@@ -11,7 +11,7 @@ function initLang() {
             break;
         }
     }
-    if (!craftwar_lagn)
+    if (!craftwar_lang)
         craftwar_lang = "en";
     showContent();
 }
