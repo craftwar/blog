@@ -1,7 +1,24 @@
-var craftwar_lang;
-window.addEventListener('load', initLang);
+<script></script>
+// var craftwar_lang;
+// window.addEventListener('load', initLang);
 // navigator.languages is supported by firefox/chrome
-function initLang() {
+// function initLang() {
+//     for (const lang of navigator.languages) {
+//         if (lang.startsWith("zh")) {
+//             craftwar_lang = "zh";
+//             break;
+//         } else if (lang.startsWith("en")) {
+//             craftwar_lang = "en";
+//             break;
+//         }
+//     }
+//     if (!craftwar_lang)
+//         craftwar_lang = "en";
+//     showContent();
+// }
+
+var craftwar_lang;
+(() => {
     for (const lang of navigator.languages) {
         if (lang.startsWith("zh")) {
             craftwar_lang = "zh";
@@ -14,7 +31,7 @@ function initLang() {
     if (!craftwar_lang)
         craftwar_lang = "en";
     showContent();
-}
+})();
 function showContent() {
     for (const e of document.querySelectorAll(".lang"))
         e.style.display = "none";
